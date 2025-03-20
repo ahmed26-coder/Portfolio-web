@@ -7,7 +7,7 @@ const Footer = () => {
 
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mt-2 sm:mt-0">
         <small className="text-black dark:text-white text-base font-bold">
-          <span className="dark:text-[#FFFFFF]/40 text-[#999999] font-normal">Made by </span> Neb Chanvanda
+          <span className="dark:text-[#FFFFFF]/40 text-[#999999] font-normal">Made by </span>Ahmad Adham
         </small>
         <small className="text-[#FABC9B] text-base cursor-pointer transition-all duration-300 ease-in-out hover:scale-110">Life is love</small>
       </div>
