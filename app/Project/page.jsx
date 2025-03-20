@@ -25,9 +25,9 @@ const page = () => {
             <div className=" p-5">
               <p className="text-[#999999]">{pero.dish}</p>
               <h2 className=" text-2xl font-bold">{pero.title}</h2>
-              <div className=" flex justify-between mt-5 px-[10%]">
+              <div className=" flex justify-between mt-5 px-[2%] sm:px-[10%]">
                 <a
-                  className=" text-lg flex items-center gap-1 border-2 rounded-md py-1 px-5"
+                  className=" text-base sm:text-lg flex items-center gap-1 border-2 rounded-md py-1 px-5"
                   href={pero.git}
                   target="_black"
                 >
@@ -35,7 +35,7 @@ const page = () => {
                   Git hup
                 </a>
                 <a
-                  className=" text-lg border-2 rounded-md py-1 px-5"
+                  className=" text-base sm:text-lg border-2 rounded-md py-1 px-5"
                   href={pero.live}
                   target="_black"
                 >
