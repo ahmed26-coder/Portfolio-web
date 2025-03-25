@@ -1,20 +1,23 @@
 import { DataProjects } from "../Components/Constent";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import { useMemo } from "react";
 
-const page = () => {
+const Page = () => {
+  const projects = useMemo(() => DataProjects, []);
+
   return (
-    <div className=" pr-[5%] pl-[5%] sm:pl-[0%]">
-      <h2 className=" text-3xl font-bold mt-10">Projects</h2>
-      <div className=" grid grid-cols-1 my-10 sm:grid-cols-2 gap-10">
-        {DataProjects.map((pero) => (
+    <div className="pr-[5%] pl-[5%] sm:pl-[0%]">
+      <h2 className="text-3xl font-bold mt-10">Projects</h2>
+      <div className="grid grid-cols-1 my-10 sm:grid-cols-2 gap-10">
+        {projects.map((pero) => (
           <article
             key={pero.id}
-            className=" bg-[#F4F5F5] dark:bg-[#141414] border-2 border-[#000000]/8 rounded-lg"
+            className="bg-[#F4F5F5] dark:bg-[#141414] border-2 border-[#000000]/8 rounded-lg"
           >
-            <div className="">
+            <div>
               <Image
-                className="rounded-t-lg w-[100%]"
+                className="rounded-t-lg w-full"
                 src={pero.img}
                 width={500}
                 height={300}
@@ -22,24 +25,26 @@ const page = () => {
                 priority
               />
             </div>
-            <div className=" p-5">
+            <div className="p-5">
               <p className="text-[#999999]">{pero.dish}</p>
-              <h2 className=" text-2xl font-bold">{pero.title}</h2>
-              <div className=" flex justify-between mt-5 px-[2%] sm:px-[10%]">
+              <h2 className="text-2xl font-bold">{pero.title}</h2>
+              <div className="flex justify-between mt-5 px-[2%] sm:px-[10%]">
                 <a
-                  className=" text-base sm:text-lg flex items-center gap-1 border-2 rounded-md py-1 px-5"
+                  className="text-base sm:text-lg flex items-center gap-1 border-2 rounded-md py-1 px-5"
                   href={pero.git}
-                  target="_black"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <FaGithub className=" text-3xl" />
-                  Git hup
+                  <FaGithub className="text-3xl" />
+                  GitHub
                 </a>
                 <a
-                  className=" text-base sm:text-lg border-2 rounded-md py-1 px-5"
+                  className="text-base sm:text-lg border-2 rounded-md py-1 px-5"
                   href={pero.live}
-                  target="_black"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Live Dome
+                  Live Demo
                 </a>
               </div>
             </div>
@@ -50,4 +55,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

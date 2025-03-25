@@ -2,8 +2,11 @@ import { IoBookmarkOutline } from "react-icons/io5";
 import { DataSkills } from "../Components/Constent";
 import Motion from "../Components/Motion";
 import Image from "next/image";
+import { useMemo } from "react";
 
 const page = () => {
+  const skills = useMemo(() => DataSkills, []);
+
   return (
     <div className="w-full max-w-[1200px] mx-auto px-5 sm:mt-[7%] mt-[20%]">
       <div className="flex flex-col sm:flex-row items-center gap-10">
@@ -29,17 +32,14 @@ const page = () => {
           alt="Profile Image"
           width={250}
           height={250}
-          priority={false}
-          placeholder="blur"
-          blurDataURL="/example-blur.jpg"
+          priority={true}
         />
       </div>
 
       <div className="flex justify-center sm:justify-start mt-8">
-        <button className=" w-full justify-center sm:w-fit cursor-pointer flex items-center gap-1 border-2 py-2 px-6 text-lg border-[#AEB1B7] rounded-md">
-          <IoBookmarkOutline className="text-[#AEB1B7] font-bold text-lg" />
-          Download My CV
-        </button>
+        <a className="w-full sm:w-auto justify-center cursor-pointer flex items-center gap-2 border-2 py-1 px-6 text-lg border-[#AEB1B7] rounded-md" href="/AhmadAdhamCV.pdf" download>
+          <IoBookmarkOutline className="text-[#AEB1B7] font-bold text-lg" />Download Cv
+        </a>
       </div>
 
       <div className="border-2 border-gray-300 my-10 dark:border-[#FFFFFF]/6 rounded-lg p-5 sm:p-10">
@@ -51,7 +51,7 @@ const page = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
-          {DataSkills.map((item) => (
+          {skills.map((item) => (
             <article key={item.id} className="flex gap-4 items-center">
               <Image
                 className="w-12 h-12 object-contain"
@@ -59,9 +59,7 @@ const page = () => {
                 alt={item.title}
                 width={50}
                 height={50}
-                priority={false}
-                placeholder="blur"
-                blurDataURL="/example-blur.jpg"
+                loading="lazy"
               />
               <div>
                 <h2 className="text-2xl font-bold">{item.title}</h2>
