@@ -47,6 +47,11 @@ export default function Sidebar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  const handleMobileMenuClick = (label) => {
+    setActiveItem(label);
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <div className="grid grid-cols-1 z-50">
@@ -116,9 +121,9 @@ export default function Sidebar() {
         <div className="z-50 md:hidden fixed top-18 left-0 w-full bg-gray-100 dark:bg-black p-4 shadow-lg transition-all duration-300">
           <nav className="flex flex-col gap-2">
             {menuItems.map(({ href, icon, label, title }) => (
-              <Link  aria-label={title} key={label} href={href}>
-                <MenuItem icon={icon} label={label} isExpanded={true} isActive={activeItem === label} onClick={() => setActiveItem(label)} />
-              </Link>
+                <Link aria-label={title} key={label} href={href} onClick={() => handleMobileMenuClick(label)}>
+                  <MenuItem icon={icon} label={label} isExpanded={true} isActive={activeItem === label} onClick={() => setActiveItem(label)} />
+                </Link>
             ))}
           </nav>
           <div className="flex justify-center space-x-3 mt-4">
