@@ -1,17 +1,47 @@
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
+
 const Footer = () => {
+  const socialLinks = [
+    { href: "https://github.com/ahmed26-coder", icon: <FaGithub className="text-gray-400" /> },
+    { href: "https://www.linkedin.com/in/ahmed-adham-479334331", icon: <FaLinkedinIn className="text-blue-400" /> },
+    { href: "https://wa.me/201016626452", icon: <IoLogoWhatsapp className="text-green-400" /> },
+    { href: "https://www.instagram.com/ahmad_.shrara/", icon: <FaInstagram className="text-red-400" /> },
+    { href: "https://www.facebook.com/profile.php?id=100089991578793", icon: <FaFacebookF className="text-blue-600" /> },
+  ];
+
   return (
-    <div className="px-[5%] w-full sm:px-[15%] flex flex-col sm:flex-row justify-between py-[4%] sm:py-[1%] bg-gray-100 dark:bg-black text-left">
+    <footer className="px-[5%] w-full sm:px-[10%] flex flex-col sm:flex-row justify-between py-[4%] sm:py-[1%] bg-gray-100 dark:bg-black text-left">
       <small className="dark:text-[#FFFFFF]/40 text-[#999999]">
-        &copy;2024 <span className="text-black dark:text-white text-base font-bold">Chanvanda · Version 2.0</span> . Version 1.0
+        &copy;2024{" "}
+        <span className="text-black dark:text-white text-base font-bold">
+          Ahmed Adham · <span className="dark:text-[#FFFFFF]/40 text-[#999999]">Front-End Developer</span>
+        </span>
       </small>
 
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mt-2 sm:mt-0">
         <small className="text-black dark:text-white text-base font-bold">
-          <span className="dark:text-[#FFFFFF]/40 text-[#999999] font-normal">Made by </span>Ahmad Adham
+          <span className="dark:text-[#FFFFFF]/40 text-[#999999] font-normal">Designed & Developed by </span>
+          Ahmed Adham
         </small>
-        <small className="text-[#FABC9B] text-base cursor-pointer transition-all duration-300 ease-in-out hover:scale-110">Life is love</small>
+        <div className="flex gap-4 text-2xl sm:mt-0 mt-3 sm:mx-0 mx-auto">
+          {socialLinks.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform duration-150 hover:scale-105"
+            >
+              {item.icon}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

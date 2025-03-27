@@ -62,6 +62,7 @@ export default function Sidebar() {
                 <div className="text-center mt-2">
                   <h2 className="text-2xl text-[#111111] dark:text-white font-semibold">Ahmad Adham</h2>
                   <p className="text-base text-[#666666]">Front-end Developer</p>
+                  <p className="text-base text-[#666666]">Web Designer</p>
                 </div>
                 <div className="flex space-x-3 mt-3 justify-center">
                   {socialLinks.map((link, index) => (
