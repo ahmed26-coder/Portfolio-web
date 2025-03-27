@@ -33,6 +33,7 @@ const Page = () => {
                   className="text-base sm:text-lg flex items-center gap-1 border-2 rounded-md py-1 px-5"
                   href={pero.git}
                   target="_blank"
+                  aria-label="github code"
                   rel="noopener noreferrer"
                 >
                   <FaGithub className="text-3xl" />
@@ -41,6 +42,7 @@ const Page = () => {
                 <a
                   className="text-base sm:text-lg border-2 rounded-md py-1 px-5"
                   href={pero.live}
+                  aria-label="live dome"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

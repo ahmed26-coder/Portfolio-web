@@ -43,7 +43,7 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row sm:justify-start gap-5 mt-10 w-full">
           <Link href="/About" className="w-full sm:w-auto">
-            <button className="w-full cursor-pointer text-black dark:text-white bg-[#AEB1B7]/32 py-2 px-6 rounded-md text-lg">
+            <button aria-label="About me page" className="w-full cursor-pointer text-black dark:text-white bg-[#AEB1B7]/32 py-2 px-6 rounded-md text-lg">
               About Me
             </button>
           </Link>
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="flex justify-between items-center mt-16">
           <h2 className="text-3xl font-bold">Projects</h2>
           <Link href="/Project">
-            <button className="border-2 cursor-pointer border-[#999999] py-1 px-5 rounded-full flex items-center gap-2">
+            <button aria-label="all project page" className="border-2 cursor-pointer border-[#999999] py-1 px-5 rounded-full flex items-center gap-2">
               All Projects <FaArrowRightLong className="text-[#999999]" />
             </button>
           </Link>

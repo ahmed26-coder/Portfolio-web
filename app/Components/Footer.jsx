@@ -6,11 +6,11 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   const socialLinks = [
-    { href: "https://github.com/ahmed26-coder", icon: <FaGithub className="text-gray-400" /> },
-    { href: "https://www.linkedin.com/in/ahmed-adham-479334331", icon: <FaLinkedinIn className="text-blue-400" /> },
-    { href: "https://wa.me/201016626452", icon: <IoLogoWhatsapp className="text-green-400" /> },
-    { href: "https://www.instagram.com/ahmad_.shrara/", icon: <FaInstagram className="text-red-400" /> },
-    { href: "https://www.facebook.com/profile.php?id=100089991578793", icon: <FaFacebookF className="text-blue-600" /> },
+    { href: "https://github.com/ahmed26-coder", title:"githup", icon: <FaGithub className="text-gray-400" /> },
+    { href: "https://www.linkedin.com/in/ahmed-adham-479334331", title:"linked in", icon: <FaLinkedinIn className="text-blue-400" /> },
+    { href: "https://wa.me/201016626452", title:"what app", icon: <IoLogoWhatsapp className="text-green-400" /> },
+    { href: "https://www.instagram.com/ahmad_.shrara/", title:"Instagram", icon: <FaInstagram className="text-red-400" /> },
+    { href: "https://www.facebook.com/profile.php?id=100089991578793", title:"facebook", icon: <FaFacebookF className="text-blue-600" /> },
   ];
 
   return (
@@ -30,6 +30,7 @@ const Footer = () => {
         <div className="flex gap-4 text-2xl sm:mt-0 mt-3 sm:mx-0 mx-auto">
           {socialLinks.map((item, index) => (
             <a
+              aria-label={item.title}
               key={index}
               href={item.href}
               target="_blank"

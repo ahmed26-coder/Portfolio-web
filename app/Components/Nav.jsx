@@ -7,16 +7,16 @@ import { Home, User, Briefcase, Mail, Sun, Menu } from "lucide-react";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const menuItems = [
-  { href: "/", icon: Home, label: "Home" },
-  { href: "/Project", icon: Briefcase, label: "Projects" },
-  { href: "/About", icon: User, label: "About" },
-  { href: "/Contact", icon: Mail, label: "Contact" },
+  { href: "/", title:"home", icon: Home, label: "Home" },
+  { href: "/Project", title:"project", icon: Briefcase, label: "Projects" },
+  { href: "/About", title:"about us", icon: User, label: "About" },
+  { href: "/Contact", title:"contact us", icon: Mail, label: "Contact" },
 ];
 
 const socialLinks = [
-  { href: "https://web.facebook.com/profile.php?id=100089991578793", icon: FaFacebook },
-  { href: "https://www.linkedin.com/in/ahmed-adham-479334331/", icon: FaLinkedin },
-  { href: "https://github.com/ahmed26-coder", icon: FaGithub },
+  { href: "https://web.facebook.com/profile.php?id=100089991578793", title:"facebook", icon: FaFacebook },
+  { href: "https://www.linkedin.com/in/ahmed-adham-479334331/", title:"Linkedin", icon: FaLinkedin },
+  { href: "https://github.com/ahmed26-coder",title:"github", icon: FaGithub },
 ];
 
 function MenuItem({ icon: Icon, label, isExpanded, isActive, onClick }) {
@@ -33,9 +33,9 @@ function MenuItem({ icon: Icon, label, isExpanded, isActive, onClick }) {
   );
 }
 
-function SocialIcon({ icon: Icon, href }) {
+function SocialIcon({ icon: Icon, href, title }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110">
+    <a href={href}  aria-label={title} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110">
       <Icon className="w-6 h-6 text-[#666666] dark:text-[#666666]" />
     </a>
   );
@@ -74,8 +74,8 @@ export default function Sidebar() {
           </div>
 
           <nav className="space-y-4 flex flex-col items-center mx-auto justify-center">
-            {menuItems.map(({ href, icon, label }) => (
-              <Link key={label} href={href}>
+            {menuItems.map(({ href, icon, label, title }) => (
+              <Link  aria-label={title} key={label} href={href}>
                 <MenuItem icon={icon} label={label} isExpanded={isExpanded} isActive={activeItem === label} onClick={() => setActiveItem(label)} />
               </Link>
             ))}
@@ -106,7 +106,7 @@ export default function Sidebar() {
           <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="flex justify-center dark:text-[#FFFFFF]/40">
             <SocialIcon icon={Sun} />
           </div>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-700 dark:text-white">
+          <button  aria-label="Menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-700 dark:text-white">
             <Menu size={30} />
           </button>
         </div>
@@ -115,8 +115,8 @@ export default function Sidebar() {
       {isMobileMenuOpen && (
         <div className="z-50 md:hidden fixed top-18 left-0 w-full bg-gray-100 dark:bg-black p-4 shadow-lg transition-all duration-300">
           <nav className="flex flex-col gap-2">
-            {menuItems.map(({ href, icon, label }) => (
-              <Link key={label} href={href}>
+            {menuItems.map(({ href, icon, label, title }) => (
+              <Link  aria-label={title} key={label} href={href}>
                 <MenuItem icon={icon} label={label} isExpanded={true} isActive={activeItem === label} onClick={() => setActiveItem(label)} />
               </Link>
             ))}

@@ -97,6 +97,7 @@ function Contact() {
         ></textarea>
         <button
           type="submit"
+          aria-label="Send Message"
           className="bg-blue-500 flex items-center justify-center gap-4 w-full text-white py-3 px-6 rounded-lg font-semibold text-lg transition hover:bg-blue-600"
           disabled={isLoading}
         >
