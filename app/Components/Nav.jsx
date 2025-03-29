@@ -56,7 +56,7 @@ export default function Sidebar() {
     <>
       <div className="grid grid-cols-1 z-50">
         <div
-          className={`hidden md:flex flex-col h-full bg-gray-100 dark:bg-black p-4 sticky left-0 transition-all duration-300 ${isExpanded ? "w-56" : "w-20"}`}
+          className={`hidden md:flex flex-col h-[100vh] top-0 bg-gray-100 dark:bg-black p-4 sm:sticky left-0 transition-all duration-300 ${isExpanded ? "w-56" : "w-20"}`}
           onMouseEnter={() => setIsExpanded(true)}
           onMouseLeave={() => setIsExpanded(false)}
         >

@@ -1,5 +1,3 @@
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
@@ -9,8 +7,6 @@ const Footer = () => {
     { href: "https://github.com/ahmed26-coder", title:"githup", icon: <FaGithub className="text-gray-400" /> },
     { href: "https://www.linkedin.com/in/ahmed-adham-479334331", title:"linked in", icon: <FaLinkedinIn className="text-blue-400" /> },
     { href: "https://wa.me/201016626452", title:"what app", icon: <IoLogoWhatsapp className="text-green-400" /> },
-    { href: "https://www.instagram.com/ahmad_.shrara/", title:"Instagram", icon: <FaInstagram className="text-red-400" /> },
-    { href: "https://www.facebook.com/profile.php?id=100089991578793", title:"facebook", icon: <FaFacebookF className="text-blue-600" /> },
   ];
 
   return (
@@ -35,7 +31,7 @@ const Footer = () => {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-transform duration-150 hover:scale-105"
+              className="transition-transform duration-150 hover:scale-110"
             >
               {item.icon}
             </a>

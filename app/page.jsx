@@ -74,11 +74,12 @@ export default function Home() {
                 priority
               />
               <div className="p-5">
-                <div className="flex justify-between">
-                  <p className="text-[#999999]">{pero.dish}</p>
-                  <FaArrowRightLong className="text-[#999999]" />
-                </div>
                 <h2 className=" text-lg sm:text-2xl font-bold">{pero.title}</h2>
+                <div className=" flex gap-5 items-center mt-4">
+                  <p className="text-[#999999] hidden sm:block">{pero.dish}</p>
+                  <p className=" bg-[#999999] text-black font-medium py-[1px] px-4 rounded-full">{pero.technique}</p>
+                  <p className=" bg-[#999999] text-black font-medium py-[1px] px-4 rounded-full">{pero.language}</p>
+                </div>
               </div>
             </article>
           ))}

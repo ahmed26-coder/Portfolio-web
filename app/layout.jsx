@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           <div className=" sm:flex gap-20">
             <Nav />
             {children}
-            </div>
+          </div>
           <Footer />
         </ThemeProvider>
       </body>   

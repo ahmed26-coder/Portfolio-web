@@ -4,24 +4,32 @@ export const DataProject = [
         img:"/project1.webp",
         dish:"Web Designer",
         title:"Electronics and phone store",
+        language:"Java Script",
+        technique:"React.js",
     },
     {
         id:"2",
         img:"/project2.webp",
         dish:"Web Designer",
         title:"A website for selling courses online",
+        language:"Java Script",
+        technique:"React.js",
     },
     {
         id:"3",
         img:"/project3.webp",
         dish:"Web Designer",
         title:"A site for donating money to the needy",
+        language:"Java Script",
+        technique:"Next.js",
     },
     {
         id:"4",
-        img:"/project4.webp",
+        img:"/project9.webp",
         dish:"Web Designer",
         title:"Website for selling or renting apartments",
+        language:"Type Script",
+        technique:"Next.js",
     },
 ];
 export const DataProjects = [
@@ -32,6 +40,8 @@ export const DataProjects = [
         title:"Electronics and phone store",
         git:"https://github.com/ahmed26-coder/Shop-Project",
         live:"https://shop-project-mu-ecru.vercel.app/",
+        language:"Java Script",
+        technique:"React.js",
     },
     {
         id:"2",
@@ -40,6 +50,8 @@ export const DataProjects = [
         title:"A website for selling courses online",
         git:"https://github.com/ahmed26-coder/Sourses",
         live:"https://sourses-online.vercel.app/",
+        language:"Java Script",
+        technique:"React.js",
     },
     {
         id:"3",
@@ -48,6 +60,8 @@ export const DataProjects = [
         title:"A site for donating money to the needy",
         git:"https://github.com/ahmed26-coder/Endeavor",
         live:"https://endeavor-one.vercel.app/",
+        language:"Java Script",
+        technique:"Next.js",
     },
     {
         id:"4",
@@ -56,6 +70,8 @@ export const DataProjects = [
         title:"Website for selling or renting apartments",
         git:"https://github.com/ahmed26-coder/Logoipsum",
         live:"https://logoipsum-lime-eight.vercel.app/",
+        language:"Java Script",
+        technique:"Next.js",
     },
     {
         id:"5",
@@ -64,6 +80,8 @@ export const DataProjects = [
         title:"Air travel website",
         git:"https://github.com/ahmed26-coder/Triptopia",
         live:"https://triptopia.vercel.app/",
+        language:"Java Script",
+        technique:"Next.js",
     },
     {
         id:"6",
@@ -72,6 +90,8 @@ export const DataProjects = [
         title:"A website for booking and communicating with doctors",
         git:"https://github.com/ahmed26-coder/Health-Point",
         live:"https://health-point-one.vercel.app/",
+        language:"Java Script",
+        technique:"Next.js",
     },
     {
         id:"7",
@@ -80,6 +100,8 @@ export const DataProjects = [
         title:"NFC selling site",
         git:"https://github.com/ahmed26-coder/NFC-Marketplace",
         live:"https://nfc-marketplace-neon.vercel.app/",
+        language:"Java Script",
+        technique:"Next.js",
     },
     {
         id:"8",
@@ -88,6 +110,18 @@ export const DataProjects = [
         title:"A website that sells nutritional products",
         git:"https://github.com/ahmed26-coder/Interior",
         live:"https://interior-rho-seven.vercel.app/",
+        language:"Java Script",
+        technique:"Next.js",
+    },
+    {
+        id:"9",
+        img:"/project9.webp",
+        dish:"Web Designer",
+        title:"Doctors website",
+        git:"https://github.com/ahmed26-coder/Meddical",
+        live:"https://meddical-three.vercel.app/",
+        language:"Type Script",
+        technique:"Next.js",
     },
 ];
 export const DataSkills = [
@@ -108,56 +142,66 @@ export const DataSkills = [
     },
     {
         id:"4",
+        img:"/TS-removebg-preview.webp",
+        title:"Type Script",
+    },
+    {
+        id:"5",
         img:"/react.svg",
         title:"React.js",
     },
     {
-        id:"5",
+        id:"6",
         img:"/next.webp",
         title:"Next.js",
     },
     {
-        id:"6",
+        id:"7",
         img:"/redux.png",
         title:"Redux",
     },
     {
-        id:"7",
+        id:"8",
         img:"/tailwindcss.svg",
         title:" Tailwind CSS",
     },
     {
-        id:"8",
+        id:"9",
         img:"/sass.webp",
         title:"Sass",
     },
     {
-        id:"9",
+        id:"10",
+        img:"/MUI-removebg-preview.webp",
+        title:"MUi",
+    },
+    {
+        id:"11",
         img:"/motion.webp",
         title:"Framer Motion",
     },
     {
-        id:"10",
+        id:"12",
         img:"/gsap.svg",
         title:"GSAP",
     },
     {
-        id:"11",
+        id:"13",
         img:"/shadcn.webp",
         title:"Shadcn/ui",
     },
     {
-        id:"12",
+        id:"14",
         img:"/git.webp",
         title:"Git",
     },
     {
-        id:"13",
+        id:"15",
         img:"/figma.svg",
         title:"Figma",
     },
     {
-        id:"14",
+        id:"16",
         img:"/axios.webp",
         title:"axios",
     }
