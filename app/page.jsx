@@ -47,7 +47,7 @@ export default function Home() {
               About Me
             </button>
           </Link>
-          <a className="w-full sm:w-auto justify-center cursor-pointer flex items-center gap-2 border-2 py-1 px-6 text-lg border-[#AEB1B7] rounded-md" href="/AhmadAdhamCV.pdf" download><IoBookmarkOutline className="text-[#AEB1B7] font-bold text-lg" />Download Cv</a>
+          <a className="w-full sm:w-auto justify-center cursor-pointer flex items-center gap-2 border-2 py-1 px-6 text-lg border-[#AEB1B7] rounded-md" href="/Ahmad Adham Shrara Cv.pdf" download><IoBookmarkOutline className="text-[#AEB1B7] font-bold text-lg" />Download Cv</a>
         </div>
 
         <div className="flex justify-between items-center mt-16">
