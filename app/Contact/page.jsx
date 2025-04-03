@@ -73,7 +73,7 @@ function Contact() {
           placeholder="Full Name"
           required
           disabled={isLoading}
-          className="p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-50"
+          className="p-3 w-full border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-50"
         />
         <input
           type="email"
@@ -83,7 +83,7 @@ function Contact() {
           placeholder="Your Email"
           required
           disabled={isLoading}
-          className="p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-50"
+          className="p-3 w-full border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-50"
         />
         <textarea
           name="message"
@@ -93,7 +93,7 @@ function Contact() {
           placeholder="Enter Your Message"
           required
           disabled={isLoading}
-          className="p-3 w-full border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-50/5"
+          className="p-3 w-full border border-gray-300 rounded-lg resize-none outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-50/5"
         ></textarea>
         <button
           type="submit"

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useRef, useMemo } from "react";
 import { Home, User, Briefcase, Mail, Sun, Menu } from "lucide-react";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
-
+import { FaXmark } from "react-icons/fa6";
 const menuItems = [
   { href: "/", title:"home", icon: Home, label: "Home" },
   { href: "/Project", title:"project", icon: Briefcase, label: "Projects" },
@@ -111,9 +111,7 @@ export default function Sidebar() {
           <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="flex justify-center dark:text-[#FFFFFF]/40">
             <SocialIcon icon={Sun} />
           </div>
-          <button  aria-label="Menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-700 dark:text-white">
-            <Menu size={30} />
-          </button>
+          <button aria-label="Menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-700 dark:text-white" > {isMobileMenuOpen ? ( <span className="text-3xl"><FaXmark /></span> ) : ( <Menu size={30} /> )}</button>
         </div>
       </div>
 
