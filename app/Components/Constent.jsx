@@ -105,16 +105,6 @@ export const DataProjects = [
     },
     {
         id:"8",
-        img:"/project8.webp",
-        dish:"Web Designer",
-        title:"A website that sells nutritional products",
-        git:"https://github.com/ahmed26-coder/Interior",
-        live:"https://interior-rho-seven.vercel.app/",
-        language:"Java Script",
-        technique:"Next.js",
-    },
-    {
-        id:"9",
         img:"/project9.webp",
         dish:"Web Designer",
         title:"Doctors website",
@@ -123,6 +113,17 @@ export const DataProjects = [
         language:"Type Script",
         technique:"Next.js",
     },
+    {
+        id:"9",
+        img:"/project10.webp",
+        dish:"Web Designer",
+        title:"online store",
+        git:"https://github.com/ahmed26-coder/Mega-Mark",
+        live:"https://mega-mark.vercel.app/",
+        language:"Type Script",
+        technique:"Next.js",
+    },
+    
 ];
 export const DataSkills = [
     {

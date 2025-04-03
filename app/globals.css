@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
 .loader {
   width: 30px;
   padding: 3px;
@@ -15,4 +16,19 @@
           mask-composite: subtract;
   animation: l3 1s infinite linear;
 }
+
 @keyframes l3 {to{transform: rotate(1turn)}}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+

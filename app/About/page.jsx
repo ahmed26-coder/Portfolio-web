@@ -1,15 +1,16 @@
 import { IoBookmarkOutline } from "react-icons/io5";
 import { DataSkills } from "../Components/Constent";
 import Motion from "../Components/Motion";
-import Image from "next/image";
 import { useMemo } from "react";
+import Motions from "../Components/Motions";
+import Image from "next/image";
 
 const page = () => {
   const skills = useMemo(() => DataSkills, []);
 
   return (
     <div className="w-full max-w-[1200px] mx-auto px-5 sm:mt-[7%] mt-[20%]">
-      <div className="flex flex-col sm:flex-row items-center gap-10">
+      <div className=" flex flex-col sm:flex-row items-center gap-10">
         <div className="text-center sm:text-left">
           <h1 className="text-4xl font-bold dark:text-white text-[#111111] mt-5 sm:mt-10">
             Hello! I&#39;m Ahmad Adham <Motion />
@@ -25,20 +26,17 @@ const page = () => {
             together!
           </p>
         </div>
-
-        <Image
-          className="rounded-full w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] object-cover"
-          src="/me.jpg"
-          alt="Profile Image"
-          width={250}
-          height={250}
-          priority={true}
-        />
+        <Motions />
       </div>
 
       <div className="flex justify-center sm:justify-start mt-8">
-        <a className="w-full sm:w-auto justify-center cursor-pointer flex items-center gap-2 border-2 py-1 px-6 text-lg border-[#AEB1B7] rounded-md" href="/Ahmad Adham Shrara Cv.pdf" download>
-          <IoBookmarkOutline className="text-[#AEB1B7] font-bold text-lg" />Download Cv
+        <a
+          className="w-full sm:w-auto justify-center cursor-pointer flex items-center gap-2 border-2 py-1 px-6 text-lg border-[#AEB1B7] rounded-md"
+          href="/Ahmad Adham Shrara Cv.pdf"
+          download
+        >
+          <IoBookmarkOutline className="text-[#AEB1B7] font-bold text-lg" />
+          Download Cv
         </a>
       </div>
 
