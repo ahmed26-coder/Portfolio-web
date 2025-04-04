@@ -9,16 +9,16 @@ const page = () => {
   const skills = useMemo(() => DataSkills, []);
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-5 sm:mt-[7%] mt-[20%]">
+    <div className="w-full max-w-[1200px] mx-auto px-5 sm:mt-[7%] mt-[22%]">
       <div className=" flex flex-col sm:flex-row items-center gap-10">
-        <div className="text-center sm:text-left">
-          <h1 className="text-4xl font-bold dark:text-white text-[#111111] mt-5 sm:mt-10">
-            Hello! I&#39;m Ahmad Adham <Motion />
+        <div className="text-left">
+          <h1 className="text-4xl gap-2 flex flex-col sm:flex-row font-bold dark:text-white text-[#111111] mt-5 sm:mt-10">
+            Hello! I&#39;m <span className=" items-center">Ahmad Adham <Motion /></span>
           </h1>
-          <h1 className="text-4xl font-bold dark:text-[#FFFFFF]/60 text-[#666666] mt-3">
+          <h1 className=" text-3xl sm:text-4xl font-bold dark:text-[#FFFFFF]/60 text-[#666666] mt-3">
             Front-end Developer | React & Next.js Expert
           </h1>
-          <p className="text-[#666666] text-xl dark:text-[#FFFFFF]/60 mt-5">
+          <p className="text-[#666666] text-xl text-center dark:text-[#FFFFFF]/60 mt-5">
             As a passionate Front-end Developer, I am eager to create visually
             captivating and user-friendly designs. I may be at the beginning of
             my journey, but I am dedicated to learning, growing, and building
@@ -29,7 +29,7 @@ const page = () => {
         <Motions />
       </div>
 
-      <div className="flex justify-center sm:justify-start mt-8">
+      <div className="flex justify-center sm:justify-start mt-10">
         <a
           className="w-full sm:w-auto justify-center cursor-pointer flex items-center gap-2 border-2 py-1 px-6 text-lg border-[#AEB1B7] rounded-md"
           href="/Ahmad Adham Shrara Cv.pdf"

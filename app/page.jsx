@@ -19,8 +19,8 @@ export default function Home() {
           Available For Work
         </p>
 
-        <h1 className="text-4xl font-bold dark:text-white text-[#111111] mt-5 sm:mt-10">
-          Hello! I&#39;m Ahmad Adham <Motion />
+        <h1 className="text-4xl font-bold dark:text-white flex flex-col sm:flex-row text-[#111111] mt-5 sm:mt-10">
+          Hello! I&#39;m <span> Ahmad Adham <Motion /></span>
         </h1>
         <h1 className="text-4xl font-bold dark:text-[#FFFFFF]/60 text-[#666666] mt-3">
           Front-end Developer | React & Next.js Expert

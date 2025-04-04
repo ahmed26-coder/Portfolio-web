@@ -7,7 +7,7 @@ const Page = () => {
   const projects = useMemo(() => DataProjects, []);
 
   return (
-    <div className="pr-[5%] pl-[5%] sm:pl-[0%]">
+    <div className="pr-[5%] pl-[5%] sm:pl-[0%] mt-[28%] sm:mt-[3%]">
       <h2 className="text-3xl font-bold mt-10">Projects</h2>
       <div className="grid grid-cols-1 my-10 sm:grid-cols-2 gap-10">
         {projects.map((pero) => (
