@@ -1,10 +1,11 @@
 "use client";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useRef, useMemo } from "react";
 import { Home, User, Briefcase, Mail, Sun, Menu } from "lucide-react";
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaXmark } from "react-icons/fa6";
 const menuItems = [
   { href: "/", title:"home", icon: Home, label: "Home" },
@@ -14,7 +15,7 @@ const menuItems = [
 ];
 
 const socialLinks = [
-  { href: "https://web.facebook.com/profile.php?id=100089991578793", title:"facebook", icon: FaFacebook },
+  { href: "https://wa.me/201016626452", title:"Whats app", icon: IoLogoWhatsapp },
   { href: "https://www.linkedin.com/in/ahmed-adham-479334331/", title:"Linkedin", icon: FaLinkedin },
   { href: "https://github.com/ahmed26-coder",title:"github", icon: FaGithub },
 ];
@@ -47,10 +48,28 @@ export default function Sidebar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  const handleMobileMenuClick = (label) => {
+  const handleMobileMenuClick = useCallback((label) => {
     setActiveItem(label);
     setIsMobileMenuOpen(false);
-  };
+  }, []);
+
+  const mobileMenuRef = useRef(null);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleClickOutside = (event) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside, { passive: true });
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -116,7 +135,7 @@ export default function Sidebar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="z-50 md:hidden fixed top-18 left-0 w-full bg-gray-100 dark:bg-black p-4 shadow-lg transition-all duration-300">
+        <div ref={mobileMenuRef} className="z-50 md:hidden rounded-b-3xl fixed top-20 right-0 w-full bg-gray-100 dark:bg-black p-4 shadow-lg transition-all duration-300">
           <nav className="flex flex-col gap-2">
             {menuItems.map(({ href, icon, label, title }) => (
                 <Link aria-label={title} key={label} href={href} onClick={() => handleMobileMenuClick(label)}>

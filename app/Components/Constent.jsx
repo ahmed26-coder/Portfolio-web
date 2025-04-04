@@ -207,3 +207,10 @@ export const DataSkills = [
         title:"axios",
     }
 ];
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io5";
+  export const socialLinks = [
+    { id:"1", href: "https://wa.me/201016626452", title:"Whats app", icon:<IoLogoWhatsapp/> },
+    { id:"2", href: "https://www.linkedin.com/in/ahmed-adham-479334331/", title:"Linkedin", icon:<FaLinkedin/> },
+    { id:"3", href: "https://github.com/ahmed26-coder",title:"github", icon:<FaGithub/> },
+  ];
