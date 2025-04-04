@@ -2,14 +2,11 @@ import { FaCircle } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoBookmarkOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { DataProject } from "./Components/Constent";
 import Motion from "./Components/Motion";
-import Image from "next/image";
 import Link from "next/link";
-import { useMemo } from "react";
+import ProjectHome from "./Components/ProjectHome"
 
 export default function Home() {
-  const projects = useMemo(() => DataProject, []);
 
   return (
     <>
@@ -19,8 +16,8 @@ export default function Home() {
           Available For Work
         </p>
 
-        <h1 className="text-4xl font-bold dark:text-white flex flex-col sm:flex-row text-[#111111] mt-5 sm:mt-10">
-          Hello! I&#39;m <span> Ahmad Adham <Motion /></span>
+        <h1 className="text-4xl gap-3 font-bold dark:text-white flex flex-col sm:flex-row text-[#111111] mt-7 sm:mt-10">
+          Hello! I&#39;m <span className=" -mt-2"> Ahmad Adham <Motion /></span>
         </h1>
         <h1 className="text-4xl font-bold dark:text-[#FFFFFF]/60 text-[#666666] mt-3">
           Front-end Developer | React & Next.js Expert
@@ -53,37 +50,12 @@ export default function Home() {
         <div className="flex justify-between items-center mt-16">
           <h2 className="text-3xl font-bold">Projects</h2>
           <Link href="/Project">
-            <button aria-label="all project page" className="border-2 cursor-pointer border-[#999999] py-1 px-5 rounded-full flex items-center gap-2">
+            <button aria-label="all project page" className="border-2 cursor-pointer border-[#999999] py-2 font-medium px-5 rounded-full flex items-center gap-2">
               All Projects <FaArrowRightLong className="text-[#999999]" />
             </button>
           </Link>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 my-10">
-          {projects.map((pero) => (
-            <article
-              key={pero.id}
-              className="bg-[#F4F5F5] dark:bg-[#141414] border-2 border-[#000000]/8 rounded-lg"
-            >
-              <Image
-                className="rounded-t-lg w-full"
-                src={pero.img}
-                width={500}
-                height={350}
-                alt={pero.title}
-                priority
-              />
-              <div className="p-5">
-                <h2 className=" text-lg sm:text-2xl font-bold">{pero.title}</h2>
-                <div className=" flex gap-5 items-center mt-4">
-                  <p className="text-[#999999] hidden sm:block items-center">{pero.dish}</p>
-                  <p className=" bg-[#999999]/30 items-center text-black dark:text-white font-medium py-[1px] px-4 rounded-full">{pero.technique}</p>
-                  <p className=" bg-[#999999]/30 items-center text-black dark:text-white font-medium py-[1px] px-4 rounded-full">{pero.language}</p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ProjectHome />
       </div>
     </>
   );

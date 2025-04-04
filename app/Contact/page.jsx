@@ -156,7 +156,6 @@ function Contact() {
           ))}
         </div>
       </div>
-
       {!isFormValid && (
         <p className="text-red-500 text-center mt-4">
           Please fill in all fields before sending the message.
