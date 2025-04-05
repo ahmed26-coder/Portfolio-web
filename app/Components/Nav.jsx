@@ -119,13 +119,13 @@ export default function Sidebar() {
       </div>
 
       <div className="z-50 md:hidden fixed top-0 left-0 w-full bg-gray-100 dark:bg-black flex justify-between items-center p-4 shadow-lg">
-        <div className="flex items-center space-x-3">
-          <Image src="/me.jpg" alt="Profile" width={40} height={40} className="rounded-full" priority />
+      <Link href="/"><div className="flex items-center space-x-3">
+          <Image src="/me.jpg" alt="Profile" width={45} height={40} className="rounded-full" priority />
           <div>
             <h2 className="text-lg text-[#111111] dark:text-white font-semibold">Ahmad Adham</h2>
             <p className="text-sm text-[#666666]">Front-end Developer</p>
           </div>
-        </div>
+        </div></Link>
         <div className="flex gap-5 items-center">
           <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="flex justify-center dark:text-[#FFFFFF]/40">
             <SocialIcon icon={Sun} />

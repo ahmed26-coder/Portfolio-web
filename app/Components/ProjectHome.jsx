@@ -86,12 +86,12 @@ const ProjectCard = React.memo(({ project }) => {
           </p>
         </div>
         <div className="sm:flex gap-4 justify-between items-center">
-          <div className=" flex gap-8 items-center">
+          <div className=" flex justify-between sm:gap-8 items-center">
             <a
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300"
+              className="flex items-center gap-2 text-base sm:text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300"
             >
               <ExternalLink size={25} />
               Live Demo
@@ -100,13 +100,13 @@ const ProjectCard = React.memo(({ project }) => {
               href={project.git}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-black transition-colors duration-300"
+              className="flex items-center gap-2 text-base sm:text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-black transition-colors duration-300"
             >
               <Github size={25} />
               Source Code
             </a>
           </div>
-          <div className="flex gap-5 sm:gap-8 items-center mt-4">
+          <div className="flex justify-between sm:gap-8 items-center mt-4">
             <p className=" bg-[#999999]/30 text-black dark:text-white font-medium py-[1px] px-4 rounded-full">
               {project.technique}
             </p>

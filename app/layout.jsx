@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>   
+    <html lang="en" className="dark" suppressHydrationWarning> 
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="class">
           <div className=" sm:flex gap-20">
