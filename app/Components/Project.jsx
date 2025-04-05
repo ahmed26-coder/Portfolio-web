@@ -8,7 +8,7 @@ const ProjectCard = React.memo(({ project }) => {
   if (!project) return null;
 
   return (
-    <div className="group relative bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl md:flex md:h-auto w-full">
+    <div className="group relative bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl xl:flex xl:h-auto w-full">
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
         <svg
           className="w-full h-full text-black dark:text-white"
@@ -63,7 +63,7 @@ const ProjectCard = React.memo(({ project }) => {
           />
         </svg>
       </div>
-      <div className="relative h-auto md:w-3/5 overflow-hidden">
+      <div className="relative xl:h-auto h-full xl:w-3/5 w-full overflow-hidden">
         <Image
           className="w-full h-[100%] object-cover transition-transform duration-300 group-hover:scale-110"
           width={500}
@@ -78,15 +78,15 @@ const ProjectCard = React.memo(({ project }) => {
 
       <div className="p-6 md:w-full flex flex-col justify-between relative z-10">
         <div>
-          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+          <h3 className=" text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
             {project.title}
           </h3>
           <p className="text-[#999999] hidden sm:block">{project.dish}</p>
-          <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-lg font-medium">
+          <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm lg:text-lg font-medium">
             {project.description}
           </p>
         </div>
-        <div className="sm:flex gap-4 justify-between items-center">
+        <div className=" lg:flex gap-4 justify-between items-center">
           <div className=" flex justify-between sm:gap-8 items-center">
             <a
               href={project.live}
