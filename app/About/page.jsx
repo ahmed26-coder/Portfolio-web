@@ -12,13 +12,13 @@ const page = () => {
     <div className="w-full max-w-[1200px] mx-auto px-5 sm:mt-[7%] mt-[22%]">
       <div className=" flex flex-col sm:flex-row items-center gap-10">
         <div className="text-left">
-          <h1 className="text-4xl gap-2 flex flex-col sm:flex-row font-bold dark:text-white text-[#111111] mt-5 sm:mt-10">
+          <h1 className="text-4xl gap-2 flex flex-col lg:flex-row font-bold dark:text-white text-[#111111] mt-5 sm:mt-10">
             Hello! I&#39;m <span className=" items-center">Ahmad Adham <Motion /></span>
           </h1>
           <h1 className=" text-3xl sm:text-4xl font-bold dark:text-[#FFFFFF]/60 text-[#666666] mt-3">
             Front-end Developer | React & Next.js Expert
           </h1>
-          <p className="text-[#666666] text-xl text-center dark:text-[#FFFFFF]/60 mt-5">
+          <p className="text-[#666666] text-xl lg:text-center dark:text-[#FFFFFF]/60 mt-5">
             As a passionate Front-end Developer, I am eager to create visually
             captivating and user-friendly designs. I may be at the beginning of
             my journey, but I am dedicated to learning, growing, and building

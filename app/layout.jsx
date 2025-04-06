@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark" suppressHydrationWarning> 
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="class">
-          <div className=" sm:flex gap-20">
+          <div className=" lg:flex gap-20">
             <Nav />
             {children}
           </div>

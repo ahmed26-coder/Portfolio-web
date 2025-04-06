@@ -61,9 +61,9 @@ function App() {
 
   return (
     <div className="relative transition-colors duration-300">
-      <div className="z-10 mx-auto px-4 min-h-screen sm:mt-0 flex items-center justify-center sm:min-h-0 sm:flex-none sm:items-start sm:justify-start">
+      <div className="z-10 mx-auto px-4 min-h-screen flex items-center justify-center sm:min-h-0 sm:flex-none sm:items-start sm:justify-start">
         <div className="mx-auto">
-          <div className="rounded-2xl sm:p-8">
+          <div className="rounded-2xl sm:p-4 lg:gap-8 ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-5 sm:space-y-8">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">

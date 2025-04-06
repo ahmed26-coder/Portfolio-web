@@ -75,7 +75,7 @@ export default function Sidebar() {
     <>
       <div className="grid grid-cols-1 z-50">
         <div
-          className={`hidden md:flex flex-col h-[100vh] top-0 bg-gray-100 dark:bg-black p-4 sm:sticky left-0 transition-all duration-300 ${isExpanded ? "w-56" : "w-20"}`}
+          className={`hidden lg:flex flex-col h-[100vh] top-0 bg-gray-100 dark:bg-black p-4 sm:sticky left-0 transition-all duration-300 ${isExpanded ? "w-56" : "w-20"}`}
           onMouseEnter={() => setIsExpanded(true)}
           onMouseLeave={() => setIsExpanded(false)}
         >
@@ -118,7 +118,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div className="z-50 md:hidden fixed top-0 left-0 w-full bg-gray-100 dark:bg-black flex justify-between items-center p-4 shadow-lg">
+      <div className="z-50 lg:hidden fixed top-0 left-0 w-full bg-gray-100 dark:bg-black flex justify-between items-center p-4 shadow-lg">
       <Link href="/"><div className="flex items-center space-x-3">
           <Image src="/me.jpg" alt="Profile" width={45} height={40} className="rounded-full" priority />
           <div>
@@ -135,7 +135,7 @@ export default function Sidebar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div ref={mobileMenuRef} className="z-50 md:hidden rounded-b-3xl fixed top-20 right-0 w-full bg-gray-100 dark:bg-black p-4 shadow-lg transition-all duration-300">
+        <div ref={mobileMenuRef} className="z-50 lg:hidden rounded-b-3xl fixed top-20 right-0 w-full bg-gray-100 dark:bg-black p-4 shadow-lg transition-all duration-300">
           <nav className="flex flex-col gap-2">
             {menuItems.map(({ href, icon, label, title }) => (
                 <Link aria-label={title} key={label} href={href} onClick={() => handleMobileMenuClick(label)}>
