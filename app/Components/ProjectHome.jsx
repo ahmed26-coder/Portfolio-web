@@ -86,7 +86,7 @@ const ProjectCard = React.memo(({ project }) => {
           </p>
         </div>
         <div className=" lg:flex gap-4 justify-between items-center">
-          <div className=" flex justify-between sm:gap-8 items-center">
+          <div className=" flex justify-between sm:gap-7 items-center">
             <a
               href={project.live}
               target="_blank"

@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="container mx-auto px-5 sm:px-[8%] mt-[28%] sm:mt-[15%] lg:mt-[7%] max-w-[1200px]">
+      <div className="container mx-auto px-5 sm:px-[8%] mt-[28%] sm:mt-[15%] lg:mt-[7%] max-w-full">
         <p className="py-1 px-5 rounded-full flex items-center w-fit gap-1 bg-[#09E37D]/16 text-[#088046] dark:text-[#12C971]">
           <FaCircle className="text-[10px]" />
           Available For Work
