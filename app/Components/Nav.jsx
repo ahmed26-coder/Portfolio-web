@@ -242,12 +242,13 @@ export default function Sidebar() {
               transition={{ duration: 0.35, ease: "easeInOut" }}
               className="z-50 lg:hidden rounded-b-3xl fixed top-20 right-0 w-full bg-gray-100 dark:bg-black p-4 shadow-xl"
             >
-              <nav data-aos="zoom-in" className="flex flex-col gap-2">
+              <nav className="flex flex-col gap-2">
                 {menuItems.map(({ href, icon, label, title }) => (
                   <Link
                     aria-label={title}
                     key={label}
                     href={href}
+                    data-aos="fade-right"
                     onClick={() => handleMenuItemClick(label)}
                   >
                     <MenuItem
