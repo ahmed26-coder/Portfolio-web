@@ -22,6 +22,7 @@ export default function Motions() {
     <div
       className="relative flex items-center rounded-full justify-center shadow-2xl shadow-blue-500"
       onClick={() => setIsModalOpen(true)}
+       data-aos="zoom-in"
     >
       <div className="absolute w-[220px] h-[220px] sm:w-[270px] sm:h-[270px] rounded-full border-4 border-dashed border-black dark:border-white animate-spin-slow"></div>
 

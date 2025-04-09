@@ -7,7 +7,7 @@ const ProjectCard = React.memo(({ project }) => {
   if (!project) return null;
 
   return (
-    <div className="group relative bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl xl:flex xl:h-75 w-full">
+    <div data-aos="fade-right" className="group relative bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl xl:flex xl:h-75 w-full">
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
         <svg
           className="w-full h-full text-black dark:text-white"

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import AosInit from "./Components/aos-init";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark" suppressHydrationWarning> 
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="class">
+          <AosInit />
           <div className=" lg:flex gap-20">
             <Nav />
             {children}
