@@ -8,7 +8,7 @@ const AosInit = () => {
     AOS.init({
       duration: 1000,
       once: false,
-      offset: 150,
+      offset: 20,
     });
     setTimeout(() => {
       AOS.refresh();
