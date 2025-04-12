@@ -17,8 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Ahmed's Portfolio",
-  description:
-    "A portfolio website showcasing my skills, projects, and experience in front-end development.",
+  description: "A portfolio website showcasing my skills, projects, and experience in front-end development.",
   keywords: [
     "Ahmed",
     "Portfolio",
@@ -37,8 +36,6 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Ahmed's Portfolio",
-    description: "Check out my latest projects and work!",
     url: "https://portfolio-ahmad-adham.vercel.app/",
     siteName: "Ahmed's Portfolio",
     images: [
