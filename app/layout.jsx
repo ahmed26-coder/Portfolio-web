@@ -50,7 +50,7 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/LOGO-DARK-removebg-preview.webp",
+    icon: "/logome6-removebg-preview.webp",
   },
 };
 
