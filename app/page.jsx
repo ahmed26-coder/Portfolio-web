@@ -4,7 +4,7 @@ import { IoBookmarkOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Motion from "./Components/Motion";
 import Link from "next/link";
-import ProjectHome from "./Components/ProjectHome"
+import HomeSection from "./Test/home-section";
 
 export default function Home() {
 
@@ -55,7 +55,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <ProjectHome />
+        <HomeSection />
       </div>
     </>
   );

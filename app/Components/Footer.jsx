@@ -1,6 +1,7 @@
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
   const socialLinks = [
@@ -12,7 +13,8 @@ const Footer = () => {
   return (
     <>
     <footer className="px-[5%] w-full lg:px-[10%] flex flex-col sm:flex-row justify-between py-[4%] sm:py-[1%] bg-gray-100 dark:bg-black text-left">
-      <small className="dark:text-[#FFFFFF]/40 text-[#999999]">
+      <small className="dark:text-[#FFFFFF]/40 text-[#999999] flex items-center">
+        <Image src="/logome6-removebg-preview.webp" alt="Logo" width={30} height={30} priority={true} />
         &copy;2025{" "}
         <span className="text-black dark:text-white text-base font-bold">
           Ahmed Adham <span className="dark:text-[#FFFFFF]/40 text-[#999999]">. Front-End Developer</span>
