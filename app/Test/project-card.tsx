@@ -5,10 +5,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ExternalLink, Github, ArrowRight } from "lucide-react"
-import React from "react"
 
 interface ProjectCardProps {
   title: string
+  id: string
   description: string
   image: string
   role: string
@@ -21,6 +21,7 @@ export default function ProjectCard({
   title,
   description,
   image,
+  id,
   role,
   demoLink,
   sourceLink,
@@ -38,7 +39,7 @@ export default function ProjectCard({
       onHoverEnd={() => setIsHovered(false)}
       className="h-full"
     >
-      <section className="overflow-hidden border border-zinc-200  dark:hover:border-blue-500 dark:hover:shadow-blue-500 bg-white h-full transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="overflow-hidden border dark:hover:shadow-blue-500 dark:hover:border-blue-500 border-zinc-200 bg-white h-full transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
         <div className="relative overflow-hidden">
           <div className="aspect-video w-full overflow-hidden">
             <Image
@@ -82,18 +83,22 @@ export default function ProjectCard({
             {technologies.map((tech) => (
               <article
                 key={tech}
-                className="bg-zinc-100 py-0.5 rounded-full px-2 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
+                className="bg-zinc-100 text-zinc-800 py-0.5 hover:bg-blue-500 px-3 rounded-full dark:bg-zinc-800 dark:text-zinc-200"
               >
                 {tech}
               </article>
             ))}
           </div>
-          <button className="ml-auto group flex items-center gap-1">
-            View Details
-            <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          <button className="ml-auto group">
+            <Link href={`/Project/${id}`}
+              className="flex items-center"
+            >
+              View Details
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </button>
         </div>
-      </section>
+      </div>
     </motion.div>
   )
 }

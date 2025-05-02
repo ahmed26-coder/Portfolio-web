@@ -3,29 +3,33 @@ import FeaturedProjectCard from "./featured-project-card"
 import React from "react"
 
 export default function ProjectsPage() {
-  const featuredProject = {
-    title: "Electronics and phone store",
-    description:
-      "A clean and modern e-commerce store built with React Vite.js and Tailwind CSS. The website showcases a product listing interface with category filtering, responsive design across all devices, and smooth interactions.",
-    image: "/project1.webp",
+   const featuredProject =
+  {
+    title: "A website for selling courses online",
+    id:"1",
+    description: "Personal portfolio website built with React.js and Tailwind CSS to showcase projects and skills.",
+    image: "/project2.webp",
     role: "Frontend Developer",
-    demoLink: "https://shop-project-mu-ecru.vercel.app/",
-    sourceLink: "https://github.com/ahmed26-coder/Shop-Project",
-    technologies: ["React Vite.js", "JavaScript", "Tailwind CSS"],
+    demoLink: "https://sourses-online.vercel.app/",
+    sourceLink: "https://github.com/ahmed26-coder/Sourses",
+    technologies: ["React", "javaScript", "Tailwind CSS"],
   }
 
-  const projects = [
+   const projects = [
     {
-      title: "A website for selling courses online",
-      description: "Personal portfolio website built with Next.js and Tailwind CSS to showcase projects and skills.",
-      image: "/project2.webp",
+      title: "Electronics and phone store",
+      id:"2",
+      description:
+        "A clean and modern e-commerce store built with React Vite.js and Tailwind CSS. The website showcases a product listing interface with category filtering, responsive design across all devices, and smooth interactions.",
+      image: "/project1.webp",
       role: "Frontend Developer",
-      demoLink: "https://sourses-online.vercel.app/",
-      sourceLink: "https://github.com/ahmed26-coder/Sourses",
-      technologies: ["React", "javaScript", "Tailwind CSS"],
+      demoLink: "https://shop-project-mu-ecru.vercel.app/",
+      sourceLink: "https://github.com/ahmed26-coder/Shop-Project",
+      technologies: ["React Vite.js", "JavaScript", "Tailwind CSS"],
     },
     {
       title: "Task Management App",
+      id:"3",
       description:
         "A productivity application for managing tasks, projects, and deadlines with team collaboration features.",
       image: "/project3.webp",
@@ -36,6 +40,7 @@ export default function ProjectsPage() {
     },
     {
       title: "Apartment Sale & Rent Website",
+      id:"4",
       description: "Real-time weather application with forecast data, location search, and interactive maps.",
       image: "/project9.webp",
       role: "Frontend Developer",
@@ -45,6 +50,7 @@ export default function ProjectsPage() {
     },
     {
       title: "Air travel website",
+      id:"5",
       description: "Online learning platform with course management, video lessons, quizzes, and progress tracking.",
       image: "/project5.webp",
       role: "Frontend Developer",
@@ -54,6 +60,7 @@ export default function ProjectsPage() {
     },
     {
       title: "Online Doctor",
+      id:"6",
       description: "Analytics dashboard for social media accounts with engagement metrics and content performance.",
       image: "/project6.webp",
       role: "Frontend Developer",
@@ -63,6 +70,7 @@ export default function ProjectsPage() {
     },
     {
       title: "NFC selling site",
+      id:"7",
       description:
         "Mobile-friendly application for discovering recipes based on available ingredients and dietary preferences.",
       image: "/project7.webp",

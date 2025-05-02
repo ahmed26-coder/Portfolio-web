@@ -1,14 +1,13 @@
 "use client"
-
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
-import React from "react"
 
 interface FeaturedProjectCardProps {
   title: string
+  id: string
   description: string
   image: string
   role: string
@@ -20,6 +19,7 @@ interface FeaturedProjectCardProps {
 export default function FeaturedProjectCard({
   title,
   description,
+  id,
   image,
   role,
   demoLink,
@@ -37,7 +37,7 @@ export default function FeaturedProjectCard({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="group dark:hover:border-blue-500 dark:hover:shadow-blue-500 relative grid gap-8 md:grid-cols-2 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="group dark:hover:shadow-blue-500 dark:hover:border-blue-500 relative grid gap-8 md:grid-cols-2 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
         <div className="relative overflow-hidden rounded-lg">
           <div className="aspect-video w-full overflow-hidden">
             <Image
@@ -65,7 +65,7 @@ export default function FeaturedProjectCard({
               {technologies.map((tech) => (
                 <article
                   key={tech}
-                  className="bg-zinc-100 py-0.5 px-2 rounded-full text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200"
+                  className="bg-zinc-100 text-zinc-800 py-0.5 px-3 hover:bg-blue-500 rounded-full dark:bg-zinc-800 dark:text-zinc-200"
                 >
                   {tech}
                 </article>
@@ -75,7 +75,7 @@ export default function FeaturedProjectCard({
 
           <div className="mt-6 flex flex-wrap gap-3">
             {demoLink && (
-              <button >
+              <button>
                 <Link href={demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
                   <ExternalLink className="h-4 w-4" />
                   Live Demo
@@ -91,7 +91,10 @@ export default function FeaturedProjectCard({
               </button>
             )}
             <button className="ml-auto group" >
-              <Link href="#" className="flex items-center gap-1">
+              <Link
+                href={`/Project/${id}`}
+                className="flex items-center gap-1"
+              >
                 View Project
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
