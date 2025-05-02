@@ -24,7 +24,7 @@ export default function HomeSection() {
       role: "Frontend Developer",
       demoLink: "https://shop-project-mu-ecru.vercel.app/",
       sourceLink: "https://github.com/ahmed26-coder/Shop-Project",
-      technologies: ["React Vite.js", "JavaScript", "Tailwind CSS"],
+      technologies: ["Vite.js", "JavaScript", "Tailwind CSS"],
     },
     {
       title: "Task Management App",

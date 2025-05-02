@@ -37,7 +37,7 @@ export default function FeaturedProjectCard({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="group dark:hover:shadow-blue-500 dark:hover:border-blue-500 relative grid gap-8 md:grid-cols-2 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="group dark:hover:shadow-blue-500 dark:hover:border-blue-500 relative grid gap-8 xl:grid-cols-2 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
         <div className="relative overflow-hidden rounded-lg">
           <div className="aspect-video w-full overflow-hidden">
             <Image

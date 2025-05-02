@@ -490,49 +490,49 @@ export default function ProjectDetailPage() {
   const params = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [project, setProject] = useState(null);
-  
+
   const projectId = useMemo(() => params.id, [params.id]);
-  
+
   useEffect(() => {
     if (!projectId) {
       console.error("No projectId found in URL params");
       setProject(null);
       return;
     }
-  
+
     const matched = projectsData.find((p) => p.id === projectId);
     setProject(matched || null);
     setCurrentImageIndex(0);
   }, [projectId]);
-  
+
   const nextImage = useCallback(() => {
     if (!project) return;
     setCurrentImageIndex((prev) =>
       prev === project.images.length - 1 ? 0 : prev + 1
     );
   }, [project]);
-  
+
   const prevImage = useCallback(() => {
     if (!project) return;
     setCurrentImageIndex((prev) =>
       prev === 0 ? project.images.length - 1 : prev - 1
     );
   }, [project]);
-  
+
   const currentIndex = useMemo(() => {
     return project ? projectsData.findIndex((p) => p.id === project.id) : -1;
   }, [project, projectsData]);
-  
+
   const prevProject = useMemo(() => {
     return currentIndex > 0 ? projectsData[currentIndex - 1] : null;
   }, [currentIndex, projectsData]);
-  
+
   const nextProject = useMemo(() => {
     return currentIndex < projectsData.length - 1
       ? projectsData[currentIndex + 1]
       : null;
   }, [currentIndex, projectsData]);
-  
+
   if (!project) {
     return (
       <div className="flex h-[70vh] mx-auto items-center justify-center">
@@ -551,7 +551,7 @@ export default function ProjectDetailPage() {
       </div>
     );
   }
-  
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
       {/* Back button */}
@@ -783,6 +783,7 @@ export default function ProjectDetailPage() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {project.relatedProjects.map((relatedProject) => (
                 <ProjectCard
+                  id={""}
                   key={relatedProject.id}
                   title={relatedProject.title}
                   description={relatedProject.description}
@@ -790,7 +791,7 @@ export default function ProjectDetailPage() {
                   role={relatedProject.role}
                   technologies={relatedProject.technologies}
                   demoLink={relatedProject.demoLink}
-                  sourceLink={relatedProject.sourceLink} id={""} />
+                  sourceLink={relatedProject.sourceLink} />
               ))}
             </div>
           </div>
