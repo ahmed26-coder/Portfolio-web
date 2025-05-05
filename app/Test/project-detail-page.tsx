@@ -83,14 +83,14 @@ const projectsData: ProjectDetail[] = [
     technologies: ["React", "javaScript", "Tailwind CSS"],
     relatedProjects: [
       {
-        id: "1",
-        title: "A website for selling courses online",
-        description: "Personal portfolio website built with React.js and Tailwind CSS to showcase projects and skills.",
-        image: "/project2.webp",
+        id: "6",
+        title: "Online Doctor",
+        description: "Analytics dashboard for social media accounts with engagement metrics and content performance.",
+        image: "/project6.webp",
         role: "Frontend Developer",
-        demoLink: "https://sourses-online.vercel.app/",
-        sourceLink: "https://github.com/ahmed26-coder/Sourses",
-        technologies: ["React", "javaScript", "Tailwind CSS"],
+        demoLink: "https://health-point-one.vercel.app/",
+        sourceLink: "https://github.com/ahmed26-coder/Health-Point",
+        technologies: ["Java Script", "Next.js", "Tailwind CSS"],
       },
       {
         id: "3",
@@ -139,9 +139,9 @@ const projectsData: ProjectDetail[] = [
       { src: "/project1.webp", alt: "Shopping cart" },
       { src: "/project1.webp", alt: "Checkout process" },
     ],
-    demoLink: "https://shop-project-mu-ecru.vercel.app/",
-    sourceLink: "https://github.com/ahmed26-coder/Shop-Project",
-    technologies: ["React Vite.js", "JavaScript", "Tailwind CSS"],
+    demoLink: "https://exclusive-seven-rho.vercel.app/",
+    sourceLink: "https://github.com/ahmed26-coder/Exclusive",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     team: ["Frontend Developer", "UI/UX Designer", "Backend Developer"],
     relatedProjects: [
       {
@@ -333,9 +333,9 @@ const projectsData: ProjectDetail[] = [
           "A clean and modern e-commerce store built with React Vite.js and Tailwind CSS. The website showcases a product listing interface with category filtering, responsive design across all devices, and smooth interactions.",
         image: "/project1.webp",
         role: "Frontend Developer",
-        demoLink: "https://shop-project-mu-ecru.vercel.app/",
-        sourceLink: "https://github.com/ahmed26-coder/Shop-Project",
-        technologies: ["React Vite.js", "JavaScript", "Tailwind CSS"],
+        demoLink: "https://exclusive-seven-rho.vercel.app/",
+        sourceLink: "https://github.com/ahmed26-coder/Exclusive",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       },
       {
         id: "3",
@@ -457,9 +457,9 @@ const projectsData: ProjectDetail[] = [
           "A clean and modern e-commerce store built with React Vite.js and Tailwind CSS. The website showcases a product listing interface with category filtering, responsive design across all devices, and smooth interactions.",
         image: "/project1.webp",
         role: "Frontend Developer",
-        demoLink: "https://shop-project-mu-ecru.vercel.app/",
-        sourceLink: "https://github.com/ahmed26-coder/Shop-Project",
-        technologies: ["React Vite.js", "JavaScript", "Tailwind CSS"],
+        demoLink: "https://exclusive-seven-rho.vercel.app/",
+        sourceLink: "https://github.com/ahmed26-coder/Exclusive",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       },
       {
         id: "3",
@@ -553,160 +553,123 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+    <div className="max-w-7xl mx-auto px-4 py-10">
       {/* Back button */}
-      <div className="mb-8">
-        <button className="group">
-          <Link href="/Project" className="flex items-center gap-2">
-            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-            Back to Projects
-          </Link>
-        </button>
+      <div className="mb-6">
+        <Link href="/Project" className="inline-flex items-center text-blue-600 hover:underline">
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Back to Projects
+        </Link>
       </div>
 
-      {/* Project header */}
-      <div className="mb-12">
-        <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
-          <div>
-            <div className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400 mb-3">
-              {project.role}
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight mb-2">{project.title}</h1>
-            <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-3xl">{project.description}</p>
-          </div>
-          <div className="flex flex-wrap gap-5 text-xl">
-            {project.demoLink && (
-              <button className="transition duration-300 transform hover:scale-105 hover:text-blue-500 hover:shadow-lg">
-                <Link
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  Live Demo
-                </Link>
-              </button>
-            )}
-            {project.sourceLink && (
-              <button className="transition duration-300 transform hover:scale-105 hover:text-green-500 hover:shadow-lg">
-                <Link
-                  href={project.sourceLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1"
-                >
-                  <Github className="h-4 w-4" />
-                  Source Code
-                </Link>
-              </button>
-            )}
-          </div>
-
-        </div>
-
-        {/* Project meta info */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          {project.client && (
-            <div className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-              <h3 className="text-lg font-semibold text-zinc-500 dark:text-zinc-400 mb-1">Client</h3>
-              <p className="font-medium text-zinc-900 dark:text-white">{project.client}</p>
-            </div>
-          )}
-          <div className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-            <h3 className="text-lg font-semibold text-zinc-500 dark:text-zinc-400 mb-1">Date</h3>
-            <p className="font-medium flex items-center gap-2 text-zinc-900 dark:text-white">
-              <Calendar className="h-4 w-4 text-blue-500" />
-              {project.date}
-            </p>
-          </div>
-          <div className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-            <h3 className="text-lg font-semibold text-zinc-500 dark:text-zinc-400 mb-1">Duration</h3>
-            <p className="font-medium flex items-center gap-2 text-zinc-900 dark:text-white">
-              <Clock className="h-4 w-4 text-emerald-500" />
-              {project.duration}
-            </p>
-          </div>
-          {project.team && (
-            <div className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-              <h3 className="text-lg font-semibold text-zinc-500 dark:text-zinc-400 mb-1">Team</h3>
-              <p className="font-medium flex items-center gap-2 text-zinc-900 dark:text-white">
-                <Users className="h-4 w-4 text-purple-500" />
-                {project.team.length} members
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* Main project image */}
-        <div className="relative aspect-video w-full overflow-hidden rounded-xl mb-12">
+      {/* Project Image */}
+      <div className="mb-10">
+        <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100">
           <Image
             src={project.mainImage || "/placeholder.svg"}
             alt={project.title}
-            width={1200}
-            height={800}
-            className="h-full w-full object-cover"
+            fill
+            className="object-cover"
           />
         </div>
+      </div>
 
-        {/* Technologies */}
-        <div className="mb-8">
-          <h2 className="text-xl font-bold mb-4">Technologies Used</h2>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
-              <article
-                key={tech}
-                className="bg-zinc-100 text-zinc-800 dark:bg-zinc-800 hover:bg-blue-500 dark:text-zinc-200 px-3 rounded-full py-0.5 text-sm"
-              >
-                {tech}
-              </article>
-            ))}
+      <div className="grid md:grid-cols-3 gap-10">
+        {/* Main Content */}
+        <div className="md:col-span-2 space-y-8">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">{project.title}</h1>
+            <p className="text-zinc-600 dark:text-zinc-400">{project.description}</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold mb-2">Project Overview</h2>
+            <p className="text-zinc-700 dark:text-zinc-300">{project.longDescription}</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold mb-2">Key Features</h2>
+            <ul className="list-disc pl-6 text-zinc-700 dark:text-zinc-300 space-y-1">
+              <li>Responsive design for all device sizes</li>
+              <li>User authentication and profile management</li>
+              <li>Course creation and management dashboard</li>
+              <li>Video streaming with progress tracking</li>
+              <li>Interactive quizzes and assessments</li>
+              <li>Payment integration with Stripe</li>
+              <li>Dark/light mode support</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold mb-2">Challenges & Solutions</h2>
+            <p className="text-zinc-700 dark:text-zinc-300">{project.challenge}</p>
+            <p className="text-zinc-700 dark:text-zinc-300 mt-2">{project.solution}</p>
           </div>
         </div>
 
-        {/* Project details tabs */}
-        <div defaultValue="overview" className="mb-16">
-          {/* Tabs */}
-          <div className="mb-8 flex flex-wrap gap-3">
-            <div className="cursor-pointer transition-all duration-300 ease-in-out bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-zinc-800 dark:text-zinc-200 px-5 py-2 rounded-full shadow-sm font-semibold text-sm tracking-wide">
-              Overview
-            </div>
-            <div className="cursor-pointer transition-all duration-300 ease-in-out bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-zinc-800 dark:text-zinc-200 px-5 py-2 rounded-full shadow-sm font-semibold text-sm tracking-wide">
-              Challenge
-            </div>
-            <div className="cursor-pointer transition-all duration-300 ease-in-out bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-zinc-800 dark:text-zinc-200 px-5 py-2 rounded-full shadow-sm font-semibold text-sm tracking-wide">
-              Solution
-            </div>
-            <div className="cursor-pointer transition-all duration-300 ease-in-out bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-zinc-800 dark:text-zinc-200 px-5 py-2 rounded-full shadow-sm font-semibold text-sm tracking-wide">
-              Outcome
-            </div>
-            {project.team && project.team.length > 0 && (
-              <div className="cursor-pointer transition-all duration-300 ease-in-out bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-zinc-800 dark:text-zinc-200 px-5 py-2 rounded-full shadow-sm font-semibold text-sm tracking-wide">
-                Team
-              </div>
-            )}
-          </div>
+        {/* Sidebar */}
+        <div className="space-y-6 text-[15px]">
+  {/* Project Details */}
+  <div className="bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl p-6 shadow-md">
+    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100 flex items-center gap-2 mb-4">
+      <Calendar className="w-5 h-5 text-blue-500" />
+      Project Details
+    </h3>
+    <div className="space-y-3 text-zinc-700 dark:text-zinc-300">
+      <div className="flex items-center gap-3">
+        <Calendar className="w-4 h-4 text-blue-500" />
+        <span>{project.date}</span>
+      </div>
+      <div className="flex items-center gap-3">
+        <Clock className="w-4 h-4 text-emerald-500" />
+        <span>{project.duration}</span>
+      </div>
+      <div className="flex items-center gap-3">
+        <Users className="w-4 h-4 text-purple-500" />
+        <span>{project.role}</span>
+      </div>
+    </div>
+  </div>
 
-          {/* Content */}
-          <div className="text-zinc-700 text-lg dark:text-zinc-300 leading-relaxed bg-white dark:bg-zinc-900 p-6 rounded-xl shadow-md space-y-4 transition-all duration-300">
-            <p>{project.longDescription}</p>
-            <p>{project.challenge}</p>
-            <p>{project.solution}</p>
-            <p>{project.outcome}</p>
-          </div>
+  {/* Technologies */}
+  <div className="bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-2xl p-6 shadow-md">
+    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100 flex items-center gap-2 mb-4">
+      🚀 Technologies
+    </h3>
+    <div className="flex flex-wrap gap-2">
+      {project.technologies?.map((tech) => (
+        <span
+          key={tech}
+          className="px-3 py-1 bg-zinc-200/60 dark:bg-zinc-700/60 text-[13px] rounded-full border border-zinc-300 dark:border-zinc-600 text-zinc-800 dark:text-zinc-100 font-medium"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
 
-          {/* Team */}
-          {project.team && (
-            <div className="mt-6 text-zinc-700 dark:text-zinc-300 leading-relaxed">
-              <ul className="list-disc pl-5 space-y-2">
-                {project.team.map((member, index) => (
-                  <li key={index}>{member}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-
+  {/* Buttons */}
+  {project.demoLink && (
+    <Link
+      href={project.demoLink}
+      target="_blank"
+      className="inline-flex items-center justify-center w-full px-4 py-2.5 bg-gradient-to-r from-black to-zinc-900 text-white rounded-xl hover:brightness-110 shadow transition font-medium"
+    >
+      <ExternalLink className="h-4 w-4 mr-2" />
+      Live Demo
+    </Link>
+  )}
+  {project.sourceLink && (
+    <Link
+      href={project.sourceLink}
+      target="_blank"
+      className="inline-flex items-center justify-center w-full px-4 py-2.5 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 shadow transition font-medium"
+    >
+      <Github className="h-4 w-4 mr-2" />
+      Source Code
+    </Link>
+  )}
+</div>
 
         {/* Project gallery */}
         { /* {project.images.length > 0 && (
@@ -777,26 +740,26 @@ export default function ProjectDetailPage() {
         )} */}
 
         {/* Related projects */}
-        {project.relatedProjects.length > 0 && (
-          <div>
-            <h2 className="text-2xl font-bold mb-8">Related Projects</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {project.relatedProjects.map((relatedProject) => (
-                <ProjectCard
-                  id={""}
-                  key={relatedProject.id}
-                  title={relatedProject.title}
-                  description={relatedProject.description}
-                  image={relatedProject.image}
-                  role={relatedProject.role}
-                  technologies={relatedProject.technologies}
-                  demoLink={relatedProject.demoLink}
-                  sourceLink={relatedProject.sourceLink} />
-              ))}
-            </div>
-          </div>
-        )}
       </div>
+      {project.relatedProjects.length > 0 && (
+        <div>
+          <h2 className="text-2xl font-bold mb-8">Related Projects</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {project.relatedProjects.map((relatedProject) => (
+              <ProjectCard
+                id={""}
+                key={relatedProject.id}
+                title={relatedProject.title}
+                description={relatedProject.description}
+                image={relatedProject.image}
+                role={relatedProject.role}
+                technologies={relatedProject.technologies}
+                demoLink={relatedProject.demoLink}
+                sourceLink={relatedProject.sourceLink} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

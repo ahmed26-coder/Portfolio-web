@@ -49,7 +49,9 @@ const SocialIcon = React.memo(function SocialIcon({ icon: Icon, href, title }) {
 
 export default function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   const pathname = usePathname();
+
   const menuItems = useMemo(() => [
     { href: "/", title: "home", icon: Home, label: "Home" },
     { href: "/Project", title: "project", icon: Briefcase, label: "Projects" },
@@ -90,6 +92,19 @@ export default function Sidebar() {
 
   const mobileMenuRef = useRef(null);
 
+  // ✅ detect 4k+ screen
+  useEffect(() => {
+    const handleResize = () => {
+      const is4K = window.innerWidth >= 1536;
+      setIsLargeScreen(is4K);
+      setIsExpanded(is4K);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     if (!isMobileMenuOpen) return;
 
@@ -121,8 +136,8 @@ export default function Sidebar() {
           className={`hidden lg:flex flex-col h-[100vh] top-0 bg-gray-100 dark:bg-black p-4 sm:sticky left-0 transition-all duration-300 ${
             isExpanded ? "w-56" : "w-20"
           }`}
-          onMouseEnter={() => setIsExpanded(true)}
-          onMouseLeave={() => setIsExpanded(false)}
+          onMouseEnter={!isLargeScreen ? () => setIsExpanded(true) : undefined}
+          onMouseLeave={!isLargeScreen ? () => setIsExpanded(false) : undefined}
         >
           <div className="flex flex-col items-center mb-6">
             <Image
@@ -183,6 +198,7 @@ export default function Sidebar() {
         </div>
       </div>
 
+      {/* Mobile Header */}
       <div className="z-50 lg:hidden fixed top-0 left-0 w-full bg-gray-100 dark:bg-black flex justify-between items-center p-4 shadow-lg">
         <Link href="/">
           <div className="flex items-center space-x-3">
@@ -233,7 +249,6 @@ export default function Sidebar() {
               transition={{ duration: 0.3 }}
               onClick={() => setIsMobileMenuOpen(false)}
             />
-
             <motion.div
               ref={mobileMenuRef}
               initial={{ y: -80, opacity: 0, scale: 0.98 }}

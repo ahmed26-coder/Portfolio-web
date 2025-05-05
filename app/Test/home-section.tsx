@@ -22,9 +22,9 @@ export default function HomeSection() {
         "A clean and modern e-commerce store built with React Vite.js and Tailwind CSS. The website showcases a product listing interface with category filtering, responsive design across all devices, and smooth interactions.",
       image: "/project1.webp",
       role: "Frontend Developer",
-      demoLink: "https://shop-project-mu-ecru.vercel.app/",
-      sourceLink: "https://github.com/ahmed26-coder/Shop-Project",
-      technologies: ["Vite.js", "JavaScript", "Tailwind CSS"],
+      demoLink: "https://exclusive-seven-rho.vercel.app/",
+      sourceLink: "https://github.com/ahmed26-coder/Exclusive",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
       title: "Task Management App",
