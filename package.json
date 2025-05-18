@@ -12,6 +12,8 @@
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/postcss": "^4.0.14",
     "aos": "^2.3.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.6.5",
     "lucide-react": "^0.483.0",
     "next": "15.2.3",
@@ -20,7 +22,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "sonner": "^2.0.3",
     "sweetalert2": "^11.17.2",
+    "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
@@ -28,6 +32,7 @@
     "@types/node": "22.15.3",
     "@types/react": "19.1.2",
     "eslint": "^9",
-    "eslint-config-next": "15.2.3"
+    "eslint-config-next": "15.2.3",
+    "tw-animate-css": "^1.3.0"
   }
 }

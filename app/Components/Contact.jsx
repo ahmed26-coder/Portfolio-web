@@ -3,6 +3,8 @@ import { useRef, useState, useCallback } from "react";
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 import { Send, Github, Linkedin, Mail } from "lucide-react";
+import { toast } from 'sonner';
+
 
 function App() {
   const form = useRef();
@@ -23,7 +25,12 @@ function App() {
   const sendEmail = useCallback(
     async (e) => {
       e.preventDefault();
-      if (!formData.name || !formData.email || !formData.message || !formData.phone) {
+      if (
+        !formData.name ||
+        !formData.email ||
+        !formData.message ||
+        !formData.phone
+      ) {
         setIsFormValid(false);
         return;
       }
@@ -37,22 +44,13 @@ function App() {
           form.current,
           "qHYF2CATMV9BARHIr"
         );
-        
+
         setFormData({ name: "", email: "", message: "", phone: "" });
         setIsLoading(false);
 
-        Swal.fire({
-          icon: "success",
-          title: "Submitted successfully!",
-          text: "Your message has been sent, I will reply to you soon 😊",
-          timer: 1500,
-          timerProgressBar: true,
-          showConfirmButton: false,
-          position: "top",
-          customClass: { popup: "swal-custom" }
-        });
+        toast.success("تم إرسال الرسالة بنجاح!");
       } catch (error) {
-        console.error("Failed to send email:", error.text);
+        toast.error("حدث خطا في الارسال حاول مري اخري");
         setIsLoading(false);
       }
     },
@@ -70,7 +68,10 @@ function App() {
                   Let's Connect
                 </h1>
                 <p className="text-xl font-medium">
-                I&#39;m always thrilled to dive into exciting new projects, explore bold and creative ideas, and seize incredible opportunities to collaborate and bring your unique visions to life in the most impactful way possible.
+                  I&#39;m always thrilled to dive into exciting new projects,
+                  explore bold and creative ideas, and seize incredible
+                  opportunities to collaborate and bring your unique visions to
+                  life in the most impactful way possible.
                 </p>
 
                 <div className="space-y-4">
@@ -112,7 +113,10 @@ function App() {
               <form ref={form} onSubmit={sendEmail} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-1"
+                    >
                       Name
                     </label>
                     <input
@@ -128,7 +132,10 @@ function App() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-1"
+                    >
                       Email
                     </label>
                     <input
@@ -145,7 +152,10 @@ function App() {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Phone
                   </label>
                   <input
@@ -161,7 +171,10 @@ function App() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Message
                   </label>
                   <textarea
@@ -183,7 +196,11 @@ function App() {
                 >
                   {isLoading && <div className="loader" />}
 
-                  <span className={isLoading ? "hidden" : "flex items-center space-x-2"}>
+                  <span
+                    className={
+                      isLoading ? "hidden" : "flex items-center space-x-2"
+                    }
+                  >
                     <Send className="w-5 h-5" />
                     <span>Send Message</span>
                   </span>
