@@ -133,7 +133,7 @@ export default function Sidebar() {
     <>
       <div className="grid grid-cols-1 z-50">
         <div
-          className={`hidden lg:flex flex-col h-[100vh] top-0 bg-gray-100 dark:bg-black p-4 sm:sticky left-0 transition-all duration-300 ${
+          className={`hidden md:flex flex-col h-[100vh] top-0 bg-gray-100 dark:bg-black p-4 sm:sticky left-0 transition-all duration-300 ${
             isExpanded ? "w-56" : "w-20"
           }`}
           onMouseEnter={!isLargeScreen ? () => setIsExpanded(true) : undefined}
@@ -199,7 +199,7 @@ export default function Sidebar() {
       </div>
 
       {/* Mobile Header */}
-      <div className="z-50 lg:hidden fixed top-0 left-0 w-full bg-gray-100 dark:bg-black flex justify-between items-center p-4 shadow-lg">
+      <div className="z-50 md:hidden fixed top-0 left-0 w-full bg-gray-100 dark:bg-black flex justify-between items-center p-4 shadow-lg">
         <Link href="/">
           <div className="flex items-center space-x-3">
             <Image
