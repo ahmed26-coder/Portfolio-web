@@ -78,7 +78,7 @@ function App() {
                   <div className="flex items-center space-x-4">
                     <Mail className="w-6 h-6 text-blue-500" />
                     <a
-                      href="https://mail.google.com/mail/u/0/#inbox"
+                      href="mailto:ahmadadham330@gmail.com"
                       target="_blank"
                       className="hover:text-blue-500 text-lg font-medium transition-colors"
                     >
