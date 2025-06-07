@@ -95,7 +95,7 @@ export default function Sidebar() {
   // ✅ detect 4k+ screen
   useEffect(() => {
     const handleResize = () => {
-      const is4K = window.innerWidth >= 1536;
+      const is4K = window.innerWidth >= 1636;
       setIsLargeScreen(is4K);
       setIsExpanded(is4K);
     };
