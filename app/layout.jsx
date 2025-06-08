@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AosInit />
-          <div className="lg:flex gap-20">
+          <div className="lg:flex">
             <Nav />
             {children}
             <Toaster richColors position="top-center" />
